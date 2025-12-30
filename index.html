@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HAPPY BIRTHDAY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="game-message" style="text-align:center; margin-top:20px; font-size:1.5rem; color:#fff;"></div>
+<div id="click-hearts-container" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none;"></div>
+<img id="cat-kiss" src="images/cat-kiss.png" alt="Cat Kiss" 
+     style="display:none; width:150px; margin-top:20px;">
+<header>
+    <h1>HAPPY BIRTHDAY MY JED</h1>
+</header>
+<section class="message">
+<h3>hi my baby. happy happy birthday. i know im not there with you 
+    right now, but im always with you deep in your heart. i hope you enjoy your first gift.
+    and perhaps the most important one because it comes from the bottom
+    of my heart. ❤️ 
+</h3>
+</section>
+<section class="photos">
+  <h2>trip down memory lane 😘</h2>
+  <div class="photo-grid">
+    <div class="photo-card" style="--i:2">
+    <img src="images/photo1.jpg" alt="Memory 1">
+    <p> this was august 13 2024. i remember this day vividly when
+      you were taking your hair out with me on facetime. it made me so
+      happy to be with you while you were doing that and makes me so
+      happy every time because i get to be a part of the little things 
+      in your life.    
+    </p>
+</div>
+    <div class="photo-card" style="--i:4">
+    <img src="images/photo2.jpg" alt="Memory 2">
+    <p> this was august 21 2024. it was during school tenth period when 
+      we decided to sit in the cafeteria lol. and your friends were there 
+      and they were looking at you. it was also when sumira saw us and gave me 
+      the inspiration to write that poem about our black fits blending. idk if you
+      remember the poem but i loved it so much. it reminds me we are one.
+    </p>
+    </div>
+    <div class="photo-card" style="--i:6">
+    <img src="images/photo3.jpg" alt="Memory 3">
+    <p> thisss obviously was september 8 2024. i remember how happy and nervous i was this day
+      when we finally made it official, even though we did a day ago lol. i remember 
+      still feeling everything from the day before. and being so hopeful and excited to see you. 
+      to just be doing mundane things together like going to the library and getting groceries. 
+      i love you and im still so in love with you a year and almost half later jed.
+    </p>
+    </div>
+    <div class="photo-card" style="--i:8">
+    <img src="images/photo4.jpg" alt="Memory 4">
+    <p> this was september 27 2024. i remember being in the yellow wing that day with you. 
+      i remember our matching fits that were so perfectly matched. i think thats the best 
+      we have ever matched honestly. i remember thats when i did soft launch with you. and this
+      picture was the cutest thing ever. the way im looking at you alone should tell you all the feelings
+      i feel about you. 
+    </p>
+    </div>
+    <div class="photo-card" style="--i:10">
+    <img src="images/photo5.jpg" alt="Memory 5">
+    <p> okayyy this one was october 12 2024. homecoming day. althoughhh there were 
+      some bumps in the road before we saw each other. i think it really reminded me that
+       no matter what, we could get over a bad moment with just some communication and forgiveness
+      and we could still end up having the most amazing time together. and i had exactly that the most
+      amazing time with you and im so grateful i did. and you looked so very handsome. especially that picture
+      i took of you on my digital camera lol. </p>
+  </div>
+  <div class="photo-card" style="--i:12">
+    <img src="images/photo6.jpg" alt="Memory 6">
+    <p> this one was november 2 2024. i remember getting boba with you and being in
+      matching outfits. and we were just in the parking lot of easton talking. and we took this
+      picture to send to kae. and it was so so so cute. you can see the giddiness on my face lol. and 
+      your dimple is so very cute.
+    </p>
+    </div>
+
+     <div class="photo-card" style="--i:14">
+    <img src="images/photo7.jpg" alt="Memory 7">
+    <p> next this is from december 25 2024. this was right before your birthdayyyy obviously. and we went to 
+      easton and forgot that everything is closed on christmas. and we sat in the photo booth and took some pictures 
+      and it was so cute. i love you. i remember we made a vlog this day tooo and you were scared to get in trouble 
+      with your parents lol. i thinkkkk. 
+
+    </p>
+    </div>
+
+     <div class="photo-card" style="--i:16">
+    <img src="images/photo8.jpg" alt="Memory 8">
+    <p> okayy last one, this was december 31 2024. this was when i finally got to see you for your birthday and 
+      give you your gifts. it was so cute. i got you rosyyyy. and the pictures we took were so so so cute. this was also
+      when the car tweaked out on me and i was scared and i had to call my dad just to find out i was just being dumb. anyways 
+      i was so happy to finally see you because i remember i went to aldi to get groceries and then i just came to see you because we 
+      still hadn't been able to. 
+
+    </p>
+    </div>
+
+  </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.getElementById('click-hearts-container');
+  const message = document.getElementById('game-message');
+  let clickedHearts = 0;
+  const totalHearts = 10; 
+
+  const messagesList = [
+    "i love you.",
+    "you're perfect.",
+    "you're so handsome.",
+    "you're the best.",
+    "i have so much love for you.",
+    "you deserve the whole world.",
+    "mwah mwah mwahhh.",
+    "my sweetheart.",
+    "i love your beautiful eyes.",
+    "you are so cutie.",
+    "you make the people around you so happy.",
+    "you're strong and you can get through everything.",
+    "i'll love you forever.",
+    "i'm so proud of you.",
+    "i fall for you more everyday.",
+    "you're my favorite person.",
+    "i love every little thing about you.",
+    "you make my days better.",
+    "i'm very grateful for you.",
+    "i know we can get through everything together.",
+    "i love you even on the super hard days.", 
+    "i want to see you accomplish all your goals.",
+    "i want to love every version of you."
+  ];
+
+  function createHeart() {
+    const heart = document.createElement('span');
+    heart.textContent = "💖";
+    heart.style.position = "absolute";
+    heart.style.fontSize = `${Math.random() * 30 + 20}px`;
+    heart.style.left = `${Math.random() * 90}vw`;
+    heart.style.bottom = `-50px`;
+    heart.style.cursor = "pointer";
+    heart.style.pointerEvents = "auto";
+    heart.style.transition = "transform 0.3s, opacity 0.3s";
+
+    heart.addEventListener('click', () => {
+      heart.style.transform = "scale(1.5)";
+      heart.style.opacity = "0";
+      clickedHearts++;
+      const randomIndex = Math.floor(Math.random() * messagesList.length);
+      message.textContent = messagesList[randomIndex] + ` ♡♡♡ total: ${clickedHearts}`;
+      setTimeout(() => heart.remove(), 300);
+    });
+
+    container.appendChild(heart);
+
+    let position = -50;
+    const speed = Math.random() * 1 + 0.5;
+    function float() {
+      position += speed;
+      heart.style.bottom = position + "px";
+      if (position < window.innerHeight + 50) {
+        requestAnimationFrame(float);
+      } else {
+        heart.remove();
+        createHeart();
+      }
+    }
+    float();
+  }
+
+  for (let i = 0; i < totalHearts; i++) {
+    setTimeout(createHeart, i * 500);
+  }
+});
+</script>
+
+<section class="game" style="text-align:center; margin-top:50px;">
+  <h2>okii game breakkk</h2>
+  <p>n to jump!!</p>
+  <div id="game-container" style="position:relative; width:500px; height:150px; background-color:#fff; margin:0 auto; overflow:hidden; border:2px solid #000;">
+    <div id="player" style="position:absolute; bottom:0; left:30px; width:30px; height:30px; background-color:green;"></div>
+    <div id="obstacle" style="position:absolute; bottom:0; left:500px; width:20px; height:30px; background-color:red;"></div>
+  </div>
+  <p id="score" style="font-size:1.2rem;">Score: 0</p>
+</section>
+
+<script>
+const player = document.getElementById("player");
+const obstacle = document.getElementById("obstacle");
+const scoreDisplay = document.getElementById("score");
+let isJumping = false;
+let obstaclePos = 500; // start off the right edge
+let score = 0;
+
+// Jump function
+function jump() {
+  if (isJumping) return;
+  isJumping = true;
+  let bottom = 0;
+  const up = setInterval(() => {
+    if (bottom >= 60) {
+      clearInterval(up);
+      const down = setInterval(() => {
+        if (bottom <= 0) {
+          clearInterval(down);
+          isJumping = false;
+        }
+        bottom -= 5;
+        player.style.bottom = bottom + "px";
+      }, 20);
+    } else {
+      bottom += 5;
+      player.style.bottom = bottom + "px";
+    }
+  }, 20);
+}
+if (score === 19) {
+  const cat = document.getElementById("cat-kiss");
+  cat.style.display = "block"; // show the cat
+  cat.style.animation = "bounce 1s ease"; // optional bounce
+}
+// Jump on space key
+document.addEventListener("keydown", (e) => {
+  if (e.code === "KeyN") jump();
+});
+
+// Move obstacle
+function moveObstacle() {
+  obstaclePos -= 5;
+  obstacle.style.left = obstaclePos + "px";
+
+  // Collision detection
+  if (obstaclePos < 60 && obstaclePos > 30 && parseInt(player.style.bottom) < 30) {
+    obstaclePos = 500; // reset obstacle
+    score = 0;         // reset score
+  }
+
+  // Reset obstacle after it leaves screen
+  if (obstaclePos <= -20) {
+    obstaclePos = 500;
+    score++;
+    scoreDisplay.textContent = "Score: " + score;
+  }
+
+  requestAnimationFrame(moveObstacle);
+}
+if (score === 19) {
+  const cat = document.getElementById("cat-kiss");
+  cat.style.display = "block"; // show the cat
+  cat.style.animation = "bounce 1s ease"; // optional bounce
+}
+moveObstacle();
+</script>
+<section class="surprise-message" style="text-align:center; margin-top:50px;">
+  <h2>to my heart ❤️</h2>
+
+  <div class="box-container" style="position:relative; width:80%; max-width:600px; margin:30px auto;">
+  <!-- Hidden message -->
+  <div class="hidden-message" style="padding:20px; background-color:#fff; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.2); font-size:1.2rem; line-height:1.5;">
+    hi my love. happy nineteenth birthday. i hope your day has been so amazing. i love you so much. i know the last few months haven't been easy. i know yesterday wasn't easy and 
+    im very sorry if that ruined your birthday day at all. i know we have had a lot of downs lately, and it's been hard on both of us. but i do think we have also grown closer in some sense
+    idk but i just feel it. i feel like i still fall more and more in love with you everyday. and i want us to be okay. i want to give you and our relationship every piece of myself and all my 
+    energy. i don't want to give up on us or you. i cannot imagine losing you lol. it hasn't been easy for me as you can imagine, there are a lot of thoughts in my head. but at the end of the day 
+    it is truly because i care about you and us. i don't want it to not be us. i've known you so closely for the last year and a half, and even then i've known you for over two years now. and even if 
+    i'm just being naive or whatever, i truly do feel like i know you. i know when you're sad just by looking at you. i know if there's something on your mind. i feel like at any given moment i could guess the 
+    next words that would come out of your mouth. and so i choose to trust you still and give you my heart. i want to believe that you are the man that i have gotten to know everything about for the past two years. 
+    i want to believe that i really do know you because i love everything about you. every little thing. i love your love for music. i could listen to talk about music for hours and hours. i could listen to play the piano 
+    or drums or guitar for hours. and listen to you teach me about music theory. i love your love and commitment to your family, especially how much you love your brother. i love all the random little things you know 
+    and i love listening to you tell me about it. i love your love for rock climbing lol. i loved going with you and i hope i can go again. it was genuinely very fun and i love spending time with you. i love your 
+    beautiful smile and laugh and eyes and hair and face and body. from head to toe. im so in love with you lol. sigh its been so long with you and i cant believe you're turning or i guess turned 19 lol. like whattt you're almost twenty
+    a fullll adult man. i genuinely hope you have a great year jed. i know this year hasn't been easy at all. i know that i dont know everything but still i know. and i hope you get to take care of yourself next year. 
+    i hope you grow from the things you have gone through this year and just learn. i hope you do think about the things you're doing and get to understand yourself better. and i hope you are happy with where you are. and i mean that
+    mentally, emotionally, physically, spiritually, and academically. in all the ways there are, i hope this year brings you peace. i really hope it will be an amazing year for you. and i hope i get to see that growth along side you. 
+    i do want the best for you and i always will no matter what. i will always love you and always be in your corner wishing you the best through love and hurt. happy nineteenth birthday. i truly hope you make it worth it. and i hope you
+    remain true to yourself. i hope you stay true to your values and who you are, continue to grow, and take on the opportunities given to you and seek them as well. i love you jed and happy birthday. i miss you and i wish i could be 
+    there with you, and spending it with you. ❤️
+  </div>
+
+  <!-- Cover box -->
+  <div class="cover-box" style="position:absolute; top:0; left:0; width:100%; height:100%; background-color:pink; border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:#fff; cursor:pointer; transition:transform 0.6s ease, opacity 0.6s ease;">
+    click me ꨄ︎ꨄ︎ꨄ︎
+  </div>
+</div>
+</section>
+<script>
+const coverBox = document.querySelector(".cover-box");
+const hiddenMessage = document.querySelector(".hidden-message");
+
+coverBox.addEventListener("click", () => {
+  coverBox.style.transform = "translateY(-220px)"; // lifts the box up
+  coverBox.style.opacity = "0"; // fade it out
+  setTimeout(() => {
+    coverBox.style.display = "none"; // remove after animation
+  }, 600);
+});
+</script>
+
+
+</body>
+
+</html>

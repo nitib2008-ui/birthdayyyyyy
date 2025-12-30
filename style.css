@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="style.css">
+
+header {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 100vh;           /* full screen */
+}
+
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+header h1 {
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background-color: lightblue;
+}
+
+.message {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* clicks go through */
+  z-index: -1; /* stays behind content */
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatUp 8s linear infinite;
+  opacity: 0;
+}
+
+.hearts span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+  font-size: 1.5rem;
+}
+
+.hearts span:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+  left: 70%;
+  animation-delay: 1s;
+  font-size: 2.5rem;
+}
+
+.hearts span:nth-child(5) {
+  left: 90%;
+  animation-delay: 3s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+.photos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.photos h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff; /* optional if background is pink */
+}
+
+/* Photo grid */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* space between images */
+}
+
+.photo-grid img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* keeps image proportions */
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.photo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* soft white card */
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 220px;
+}
+
+.photo-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.photo-card p {
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.3rem;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.photos {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffd1dc, #ffe4e1); /* soft gradient */
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 90%;
+}
+
+.photo-card::after {
+  content: "💖";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.photos h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ff3366;
+}
+
+.photo-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: calc(var(--i) * 0.3s); /* this uses the --i variable */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#game-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.8rem;          /* bigger text */
+  font-family: 'Cursive', sans-serif;  /* cute font */
+  color: #fff;                 /* white text */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* soft shadow */
+  animation: popIn 0.3s ease;  /* small pop effect */
+}
+
+/* optional pop animation */
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
